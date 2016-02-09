@@ -25,8 +25,8 @@ public class SalariedEmployee implements Employee {
         setAnnualBonus(annualBonus);
     }
 
-    public double getAnnualSalary() {
-        return annualSalary;
+    public double getAnnualWages() {
+        return annualSalary + annualBonus;
     }
 
     public void setAnnualSalary(double annualSalary) {
@@ -41,6 +41,9 @@ public class SalariedEmployee implements Employee {
     }
 
     public void setAnnualBonus(double annualBonus) {
+          if( annualBonus < 0 || annualBonus > 100000) {
+        System.out.println("Please enter a valid Bonus");
+    }
         this.annualBonus = annualBonus;
     }
 
