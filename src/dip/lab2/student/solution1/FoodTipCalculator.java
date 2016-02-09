@@ -10,12 +10,15 @@ package dip.lab2.student.solution1;
  * @author athanas1
  */
 public class FoodTipCalculator implements TipCalculator {
-     private static final double MIN_BILL = 0.00;
-    private static final String BILL_ENTRY_ERR =
+    /*
+    These are Rigid need to bend them 
+    */
+     private double MIN_BILL = 0.00;
+    private String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
+    private double GOOD_RATE = 0.20;
+    private double FAIR_RATE = 0.15;
+    private double POOR_RATE = 0.10;
 
     private double bill;
    
@@ -26,6 +29,7 @@ public class FoodTipCalculator implements TipCalculator {
         this.setBill(billAmt);
     }
 
+     @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -59,4 +63,37 @@ public class FoodTipCalculator implements TipCalculator {
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
+
+    public double getMIN_BILL() {
+        return MIN_BILL;
+    }
+
+    public void setMIN_BILL(double MIN_BILL) {
+        this.MIN_BILL = MIN_BILL;
+    }
+
+    public double getGOOD_RATE() {
+        return GOOD_RATE;
+    }
+
+    public void setGOOD_RATE(double GOOD_RATE) {
+        this.GOOD_RATE = GOOD_RATE;
+    }
+
+    public double getFAIR_RATE() {
+        return FAIR_RATE;
+    }
+
+    public void setFAIR_RATE(double FAIR_RATE) {
+        this.FAIR_RATE = FAIR_RATE;
+    }
+
+    public double getPOOR_RATE() {
+        return POOR_RATE;
+    }
+
+    public void setPOOR_RATE(double POOR_RATE) {
+        this.POOR_RATE = POOR_RATE;
+    }
+    
 }

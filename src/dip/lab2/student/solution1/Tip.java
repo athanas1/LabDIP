@@ -12,7 +12,7 @@ import dip.lab2.*;
  * @author Alex
  */
 public class Tip {
-    public double getTipForEmployee (TipCalculator TC){
+    public double getTip(TipCalculator TC){
         return TC.getTip();
     }
 }

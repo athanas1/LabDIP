@@ -18,8 +18,8 @@ public class Startup {
         
         Tip tp = new Tip();
         
-        System.out.println(tp.getTipForEmployee(tip1));
-        System.out.println(tp.getTipForEmployee(tip2));
+        System.out.println(tp.getTip(tip1));
+        System.out.println(tp.getTip(tip2));
     }
 }
 
