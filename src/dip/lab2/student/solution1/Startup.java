@@ -13,11 +13,13 @@ public class Startup {
      
     
    public static void main(String[] args) {
-        TipCalculator tip1 = new FoodTipCalculator(ServiceQuality.GOOD, 45);
+        TipCalculator tip1 = new FoodTipCalculator(ServiceQuality.POOR, 45);
+        TipCalculator tip2 = new BaggageTipCalculator(ServiceQuality.GOOD,12);
         
         Tip tp = new Tip();
         
         System.out.println(tp.getTipForEmployee(tip1));
+        System.out.println(tp.getTipForEmployee(tip2));
     }
 }
 
