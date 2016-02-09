@@ -25,8 +25,13 @@ public class Startup {
     };
  
     public static void main(String[] args) {
+        TipCalculator tip1 = new BaggageServiceTipCalculator(BaggageServiceTipCalculator.ServiceQuality.GOOD, 20 );
+        TipCalculator tip2 = new FoodServiceTipCalculator(FoodServiceTipCalculator.ServiceQuality.POOR, 10);
+        
+        TipCalculator tipcalc[] = {tip1, tip2};
         
         
+         Tip lab1 = new Tip();
     }
 
 }
