@@ -51,7 +51,7 @@ public class BaggageTipCalculator implements TipCalculator {
     }
 
     public final void setServiceRating(ServiceQuality q) {
-        // No need to validate because enums provide type safety!
+        // No need to validate because enums provide type safety!  
         serviceQuality = q;
     }
 

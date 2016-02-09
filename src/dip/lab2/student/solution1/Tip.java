@@ -10,6 +10,7 @@ import dip.lab2.*;
 /**
  *
  * @author Alex
+ * Use Service or Manager when naming high level classes
  */
 public class Tip {
     public double getTip(TipCalculator TC){
