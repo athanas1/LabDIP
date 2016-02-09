@@ -13,6 +13,9 @@ public class Startup {
      
     
    public static void main(String[] args) {
+       /* 
+       New One
+       */
         TipCalculator calc = new FoodTipCalculator(ServiceQuality.GOOD,100);
         /*
         This needs to be flexible
@@ -21,7 +24,18 @@ public class Startup {
         double amt = mgr.getTip();
         System.out.println(amt);
         
+        /* 
+        old one
+        */
+         TipCalculator tip1 = new FoodTipCalculator(ServiceQuality.POOR, 45);
+        TipCalculator tip2 = new BaggageTipCalculator(ServiceQuality.GOOD,12);
+        
+        Tip tp = new Tip();
+        
+        System.out.println(tp.getTip(tip1));
+        System.out.println(tp.getTip(tip2));
+    }
         
     }
-}
+
 
