@@ -10,5 +10,5 @@ package dip.lab3.student.solution1;
  * @author Alex
  */
 public interface MessageOutput {
-    public void sendMessage(final MessageInput msgInput);
+    public void sendMessage(MessageInput msgInput);
 }
