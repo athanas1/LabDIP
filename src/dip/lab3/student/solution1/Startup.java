@@ -5,6 +5,7 @@
  */
 package dip.lab3.student.solution1;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author Alex
@@ -12,9 +13,15 @@ package dip.lab3.student.solution1;
 public class Startup {
     public static void main(String[] args) {
         MessageInput input = new KeyboardMessageInput();
-        MessageOutput output = new ConsoleMessageOutput();
+        MessageOutput output = new JOptionMessageOutput();
         
         MessageService lab3 = new MessageService(input , output);
         lab3.produceMessage();
+        
+        MessageInput input2 = new GoodMorningMessageInput();
+        MessageOutput output2 = new ConsoleMessageOutput();
+        
+        MessageService service = new MessageService(input2 , output2);
+        service.produceMessage();
     }
 }
