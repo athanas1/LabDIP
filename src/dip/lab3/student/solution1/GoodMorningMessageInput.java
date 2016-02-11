@@ -10,7 +10,7 @@ package dip.lab3.student.solution1;
  * @author Alex
  */
 public class GoodMorningMessageInput implements MessageInput {
-    private String Msg = "Good Morning";
+    private final String Msg = "Good Morning";
     
     @Override
     public Message getMessage() {

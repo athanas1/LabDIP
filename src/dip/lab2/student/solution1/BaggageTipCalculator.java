@@ -10,14 +10,14 @@ package dip.lab2.student.solution1;
  * @author athanas1
  */
 public class BaggageTipCalculator implements TipCalculator {
-        private static final double MIN_BILL = 0.00;
-    private double MAX_BILL = 100.00;
-    private String BILL_ENTRY_ERR =
-            "Error: bill must be between " + MIN_BILL + " and "
-            + MAX_BILL;
-    private double GOOD_RATE = 0.20;
-    private double FAIR_RATE = 0.15;
-    private double POOR_RATE = 0.10;
+    private double minBill = 0;
+    private double maxBill = 100.00;
+    private String billEntryError =
+            "Error: bill must be between " + minBill + " and "
+            + maxBill;
+    private double goodRate = 0.20;
+    private double fairRate = 0.15;
+    private double poorRate = 0.10;
 
     private double baseTipPerBag;
     private int bagCount;
@@ -37,13 +37,13 @@ public class BaggageTipCalculator implements TipCalculator {
 
         switch(serviceQuality) {
             case GOOD:
-                tip = baseTipPerBag * bagCount * (1 + GOOD_RATE);
+                tip = baseTipPerBag * bagCount * (1 + goodRate);
                 break;
             case FAIR:
-                tip = baseTipPerBag * bagCount * (1 + FAIR_RATE);
+                tip = baseTipPerBag * bagCount * (1 + fairRate);
                 break;
             case POOR:
-                tip = baseTipPerBag * bagCount * (1 + POOR_RATE);
+                tip = baseTipPerBag * bagCount * (1 + poorRate);
                 break;
         }
 
@@ -83,37 +83,46 @@ public class BaggageTipCalculator implements TipCalculator {
         this.baseTipPerBag = baseTipPerBag;
     }
 
-    public double getMAX_BILL() {
-        return MAX_BILL;
+    public double getMinBill() {
+        return minBill;
     }
 
-    public void setMAX_BILL(double MAX_BILL) {
-        this.MAX_BILL = MAX_BILL;
+    public void setMinBill(double minBill) {
+        this.minBill = minBill;
     }
 
-    public double getGOOD_RATE() {
-        return GOOD_RATE;
+    public double getMaxBill() {
+        return maxBill;
     }
 
-    public void setGOOD_RATE(double GOOD_RATE) {
-        this.GOOD_RATE = GOOD_RATE;
+    public void setMaxBill(double maxBill) {
+        this.maxBill = maxBill;
     }
 
-    public double getFAIR_RATE() {
-        return FAIR_RATE;
+    public double getGoodRate() {
+        return goodRate;
     }
 
-    public void setFAIR_RATE(double FAIR_RATE) {
-        this.FAIR_RATE = FAIR_RATE;
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
     }
 
-    public double getPOOR_RATE() {
-        return POOR_RATE;
+    public double getFairRate() {
+        return fairRate;
     }
 
-    public void setPOOR_RATE(double POOR_RATE) {
-        this.POOR_RATE = POOR_RATE;
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
     }
+
+    public double getPoorRate() {
+        return poorRate;
+    }
+
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
+    }
+
 
     
 }

@@ -13,7 +13,7 @@ public class FoodTipCalculator implements TipCalculator {
     /*
     These are Rigid need to bend them First letter lowercase camelcase
     */
-     private double minBill = 0.00;
+    private double minBill = 0.00;
     private String billEntryError =
             "Error: bill must be greater than or equal to " + minBill;
     private double goodRate = 0.20;
