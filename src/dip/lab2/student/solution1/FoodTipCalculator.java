@@ -11,14 +11,14 @@ package dip.lab2.student.solution1;
  */
 public class FoodTipCalculator implements TipCalculator {
     /*
-    These are Rigid need to bend them 
+    These are Rigid need to bend them First letter lowercase camelcase
     */
-     private double MIN_BILL = 0.00;
-    private String BILL_ENTRY_ERR =
-            "Error: bill must be greater than or equal to " + MIN_BILL;
-    private double GOOD_RATE = 0.20;
-    private double FAIR_RATE = 0.15;
-    private double POOR_RATE = 0.10;
+     private double minBill = 0.00;
+    private String billEntryError =
+            "Error: bill must be greater than or equal to " + minBill;
+    private double goodRate = 0.20;
+    private double fairRate = 0.15;
+    private double poorRate = 0.10;
 
     private double bill;
    
@@ -35,13 +35,13 @@ public class FoodTipCalculator implements TipCalculator {
 
         switch(serviceQuality) {
             case GOOD:
-                tip = bill * GOOD_RATE;
+                tip = bill * goodRate;
                 break;
             case FAIR:
-                tip = bill * FAIR_RATE;
+                tip = bill * fairRate;
                 break;
             case POOR:
-                tip = bill * POOR_RATE;
+                tip = bill * poorRate;
                 break;
         }
 
@@ -49,8 +49,8 @@ public class FoodTipCalculator implements TipCalculator {
     }
 
     public final void setBill(double billAmt) {
-        if(billAmt < MIN_BILL) {
-            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+        if(billAmt < minBill) {
+            throw new IllegalArgumentException(billEntryError);
         }
         bill = billAmt;
     }
@@ -64,36 +64,46 @@ public class FoodTipCalculator implements TipCalculator {
         return serviceQuality;
     }
 
-    public double getMIN_BILL() {
-        return MIN_BILL;
+    public double getMinBill() {
+        return minBill;
     }
 
-    public void setMIN_BILL(double MIN_BILL) {
-        this.MIN_BILL = MIN_BILL;
+    public void setMinBill(double minBill) {
+        this.minBill = minBill;
     }
 
-    public double getGOOD_RATE() {
-        return GOOD_RATE;
+    public String getBillEntryError() {
+        return billEntryError;
     }
 
-    public void setGOOD_RATE(double GOOD_RATE) {
-        this.GOOD_RATE = GOOD_RATE;
+    public void setBillEntryError(String billEntryError) {
+        this.billEntryError = billEntryError;
     }
 
-    public double getFAIR_RATE() {
-        return FAIR_RATE;
+    public double getGoodRate() {
+        return goodRate;
     }
 
-    public void setFAIR_RATE(double FAIR_RATE) {
-        this.FAIR_RATE = FAIR_RATE;
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
     }
 
-    public double getPOOR_RATE() {
-        return POOR_RATE;
+    public double getFairRate() {
+        return fairRate;
     }
 
-    public void setPOOR_RATE(double POOR_RATE) {
-        this.POOR_RATE = POOR_RATE;
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
     }
+
+    public double getPoorRate() {
+        return poorRate;
+    }
+
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
+    }
+
+  
     
 }
