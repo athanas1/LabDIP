@@ -16,12 +16,12 @@ public class Startup {
         MessageOutput output = new JOptionMessageOutput();
         
         MessageService lab3 = new MessageService(input , output);
-        lab3.produceMessage();
+        lab3.makeMessage();
         
         MessageInput input2 = new GoodMorningMessageInput();
         MessageOutput output2 = new ConsoleMessageOutput();
         
         MessageService service = new MessageService(input2 , output2);
-        service.produceMessage();
+        service.makeMessage();
     }
 }

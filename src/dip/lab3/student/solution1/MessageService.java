@@ -19,7 +19,7 @@ public class MessageService {
         this.output = output;
     }
 
-    public void produceMessage() {
+    public void makeMessage() {
         output.sendMessage(input);
     }
 }
