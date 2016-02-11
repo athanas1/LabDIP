@@ -15,8 +15,8 @@ public class JOptionMessageOutput implements MessageOutput {
     
 
      @Override
-    public void sendMessage(final MessageInput msgInput) {
-        Message msg = msgInput.getMessage();
+    public void sendMessage(MessageInput messageInput) {
+        Message msg = messageInput.getMessage();
         JOptionPane.showMessageDialog(null, msg.getMessageAsString());
     }
 }
