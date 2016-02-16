@@ -12,10 +12,11 @@ import java.util.Scanner;
  * @author Alex
  */
 public class KeyboardMessageInput implements MessageInput {
+Scanner input = new Scanner(System.in);
+
 
     @Override
     public Message getMessage() {
-        Scanner input = new Scanner(System.in);
         String inputMsg = input.nextLine();
         Message msg = new Message(inputMsg);
         return msg;
